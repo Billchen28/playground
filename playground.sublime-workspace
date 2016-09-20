@@ -1,0 +1,277 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "/*\n * main.c\n *\n *  Created on: 2016年9月18日\n *      Author: Bill\n */\n\n#include <stdio.h>\n\nint main()\n{\n	char input[200] = {0};\n	char output[200] = {0};\n	char sub_str[8] = \"fjxmlhx\";\n	char target_str[10] = \"marshtomp\";\n	int str_len = 0;\n	int i = 0;\n	int out_index = 0;\n	int target_index = 0;\n	int replace_start = -1;\n	char* input_list[10240] = {NULL};\n	int input_count = 0;\n	while (gets(input) != NULL) {\n		input_list[input_count];\n		input_count++;\n	}\n\n	{\n		str_len = strlen(input);\n		for (i = 0;i < str_len; i++) {\n			char l_c = input[i];\n			char o_c = input[i];\n			if (l_c >= 65 && l_c <= 90) {\n				l_c += 32;\n			}\n			if (l_c == target_str[target_index]) {\n				if (replace_start < 0) {\n					replace_start = out_index;\n				}\n				target_index++;\n				if (target_index > 8) {\n					int j = 0;\n					for (j = 0;j < 7; j++) {\n						output[replace_start + j] = sub_str[j];\n					}\n					target_index = 0;\n					out_index = replace_start + 7;\n					replace_start = -1;\n					continue;\n				}\n			} else {\n				replace_start = -1;\n				target_index = 0;\n			}\n			output[out_index] = o_c;\n			out_index++;\n		}\n		printf(\"%s\\n\", output);\n		out_index = 0;\n		replace_start = -1;\n		target_index = 0;\n		memset(input, 0, 200);\n		memset(output, 0, 200);\n	}\n	return 0;\n}\n",
+			"file": "1082/main.c",
+			"file_size": 1211,
+			"file_write_time": 131186797910000000,
+			"settings":
+			{
+				"buffer_size": 1239,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "The Marshtomp has Marshtomp seen Marshtompit all before.The Marshtomp has seen it all before.",
+			"settings":
+			{
+				"buffer_size": 93,
+				"line_ending": "Unix",
+				"name": "The Marshtomp has Marshtomp seen Marshtompit all b"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/bill/Documents/playground",
+		"/Users/bill/Documents/playground/1082",
+		"/Users/bill/Documents/playground/a+b"
+	],
+	"file_history":
+	[
+		"/Users/bill/.ssh/id_rsa.pub",
+		"/Users/bill/Documents/f8app/android/app/build.gradle",
+		"/Users/bill/Documents/react-native/AwesomeProject/android/app/build.gradle",
+		"/Users/bill/Documents/hello.go",
+		"/Volumes/MOBILEDRIVE/China_TOPO_DEM/install.bat",
+		"/Users/bill/Documents/SocketIOChat/srv-SocketChat/index.js",
+		"/Users/bill/Documents/protobuf/autogen.sh",
+		"/Users/bill/Documents/protobuf/README.md"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"/Users/bill/Documents/f8app"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"23.0.1",
+			"buildToolsVersion",
+			"ButtonViewController"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "1082/main.c",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1239,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								429,
+								429
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 17.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 93,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								93
+							]
+						],
+						"settings":
+						{
+							"auto_name": "The Marshtomp has Marshtomp seen Marshtompit all b",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "playground.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"button",
+				"Swift/UIKitCatalog/ButtonViewController.swift"
+			],
+			[
+				"stroy",
+				"Objective-C/UIKitCatalog/Base.lproj/Main.storyboard"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 432.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
